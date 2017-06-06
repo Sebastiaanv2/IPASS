@@ -7,7 +7,8 @@ import java.sql.SQLException;
 
 public class DAOtest {
     public static void main(String[] args) throws SQLException {
-        new DatabaseConn("MYSQL").open();
+        DatabaseConn dc = new DatabaseConn("MYSQL");
+        dc.open();
         PlayerDAO pd = new PlayerDAO();
 
         pd.printAllPlayers();
@@ -19,5 +20,9 @@ public class DAOtest {
         pd.deletePlayer("Johnny Depp");
 
         pd.printAllPlayers();
+
+
+
+        dc.close();
     }
 }

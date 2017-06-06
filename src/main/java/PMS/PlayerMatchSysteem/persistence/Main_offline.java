@@ -3,7 +3,7 @@ package PMS.PlayerMatchSysteem.persistence;
 import PMS.PlayerMatchSysteem.model.Game;
 import PMS.PlayerMatchSysteem.model.Player;
 
-public class Main {
+public class Main_offline {
     public static void main(String[] args) {
         TournamentDAO t = new TournamentDAO();
 

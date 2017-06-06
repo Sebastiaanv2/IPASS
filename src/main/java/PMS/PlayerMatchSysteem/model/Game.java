@@ -6,24 +6,14 @@ public class Game {
     private int Game_id;
     private Player player1;
     private Player player2;
-    private int Tournament_id;
 
-    public Game(int Game_id, Player player1, Player player2, int tournament_id) {
+    public Game(int Game_id, Player player1, Player player2) {
         this.Game_id = Game_id;
         this.player1 = player1;
         this.player2 = player2;
-        Tournament_id = tournament_id;
     }
 
     public Game() {
-    }
-
-    public int getTournament_id() {
-        return Tournament_id;
-    }
-
-    public void setTournament_id(int tournament_id) {
-        Tournament_id = tournament_id;
     }
 
     public int getGame_id() {

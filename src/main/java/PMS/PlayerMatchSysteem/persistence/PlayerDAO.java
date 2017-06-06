@@ -11,11 +11,11 @@ import java.util.ArrayList;
 
 import static PMS.PlayerMatchSysteem.persistence.DatabaseConn.close;
 
-public class PlayerDAO {
+public class PlayerDAO extends BaseDAO{
 
     public ArrayList<Player> getAllPlayers() throws SQLException {
         ArrayList<Player> allPlayers = new ArrayList<Player>();
-        Statement stmt = DatabaseConn.myConn.createStatement();
+        Statement stmt = getConnection().createStatement();
         ResultSet RS = stmt.executeQuery("SELECT * FROM PLAYER");
         while (RS.next()) {
             int Player_id = RS.getInt("Player_id");
@@ -32,11 +32,9 @@ public class PlayerDAO {
         }
     }
 
-
-
     public void createPlayer(String Name) throws SQLException {
         String query = "INSERT INTO PLAYER VALUES(NULL, ?)";
-        PreparedStatement pstmt = DatabaseConn.myConn.prepareStatement(query);
+        PreparedStatement pstmt = getConnection().prepareStatement(query);
         pstmt.setString(1,Name);
         pstmt.executeUpdate();
         System.out.println("player with name: "+Name+" created!");
@@ -45,10 +43,13 @@ public class PlayerDAO {
 
     public void deletePlayer(String Name) throws SQLException {
         String query = "DELETE FROM PLAYER WHERE Name = ?";
-        PreparedStatement pstmt = DatabaseConn.myConn.prepareStatement(query);
+        PreparedStatement pstmt = getConnection().prepareStatement(query);
         pstmt.setString(1,Name);
         pstmt.executeUpdate();
         System.out.println("player with name: "+Name+" deleted!");
         pstmt.close();
     }
+
+
+
 }

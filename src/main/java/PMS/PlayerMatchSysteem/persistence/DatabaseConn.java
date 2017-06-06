@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseConn {
-    public static Connection myConn;
+    public Connection myConn;
 
     private String databaseDriver = "oracle:thin:@";
     private String databaseUrl = "localhost";
@@ -42,7 +42,7 @@ public class DatabaseConn {
 
     }
 
-    public static void close() throws SQLException {
+    public void close() throws SQLException {
         myConn.close();
 
     }
