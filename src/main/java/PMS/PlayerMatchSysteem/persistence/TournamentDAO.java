@@ -10,21 +10,39 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-public class TournamentDAO extends BaseDAO{
+public class TournamentDAO extends BaseDAO {
 
-    private ArrayList<Game> games = new ArrayList<Game>();
+    public Tournament generateTournament() {
+        Tournament tournament = new Tournament();
 
-    public ArrayList<Tournament> getAllTournaments(){
+        try {
+            String query = "INSERT INTO tournament VALUES(null,CURDATE(),null)";
+            Statement stmt = null;
+            stmt = DatabaseConn.myConn.createStatement();
+
+            ResultSet rs = stmt.executeQuery(query);
+            while (rs.next()) {
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+        return tournament;
+    }
+
+    public ArrayList<Tournament> getAllTournaments() {
         ArrayList<Tournament> tournaments = new ArrayList<Tournament>();
         try {
             String query = "Select * from tournament";
-            Statement stmt = getConnection().createStatement();
+            Statement stmt = DatabaseConn.myConn.createStatement();
             ResultSet rs = stmt.executeQuery(query);
-            while(rs.next()){
-                int id = rs.getInt(0);
-                Date sd = rs.getDate(1);
-                Date ed = rs.getDate(2);
-                Tournament t = new Tournament(id,sd,ed);
+            while (rs.next()) {
+                int id = rs.getInt(1);
+                Date sd = rs.getDate(2);
+                Date ed = rs.getDate(3);
+                Tournament t = new Tournament(id, sd, ed);
                 tournaments.add(t);
             }
         } catch (SQLException e) {
@@ -34,31 +52,9 @@ public class TournamentDAO extends BaseDAO{
         return tournaments;
     }
 
-    public void createAllGames(ArrayList<Player> players) {
-        for (int i = 0; i <= players.size() - 1; i++) {
-            for (int j = i + 1; j <= players.size() - 1; j++) {
-                this.createGame(players.get(i), players.get(j));
-/*                for (Game g : games){
-                    if (g.getPlayer1().getID() != players.get(i).getID() && g.getPlayer2().getID() != players.get(j).getID()) {
-                        break;
-                    } else if (g.getPlayer1().getID() != players.get(i).getID() && g.getPlayer2().getID() != players.get(j).getID()){
-                        break;
-                    } else {
-                        this.createGame(players.get(i), players.get(j));
-                    }
-                }*/
-            }
+    public void printAllTournaments() throws SQLException {
+        for (Tournament tour : this.getAllTournaments()) {
+            System.out.println(tour.toString());
         }
-    }
-
-    public void createGame(Player p1, Player p2) {
-        //new match object
-        int matchId = games.size();
-        Player player1 = p1;
-        Player player2 = p2;
-
-        Game m = new Game(matchId, p1, p2,4);
-        games.add(m);
-        System.out.println(m);
     }
 }

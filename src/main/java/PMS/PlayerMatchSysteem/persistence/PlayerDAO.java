@@ -9,13 +9,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import static PMS.PlayerMatchSysteem.persistence.DatabaseConn.close;
-
 public class PlayerDAO extends BaseDAO{
 
     public ArrayList<Player> getAllPlayers() throws SQLException {
         ArrayList<Player> allPlayers = new ArrayList<Player>();
-        Statement stmt = getConnection().createStatement();
+        Statement stmt = DatabaseConn.myConn.createStatement();
         ResultSet RS = stmt.executeQuery("SELECT * FROM PLAYER");
         while (RS.next()) {
             int Player_id = RS.getInt("Player_id");
@@ -27,14 +25,14 @@ public class PlayerDAO extends BaseDAO{
     }
 
     public void printAllPlayers() throws SQLException {
-        for (Player player : getAllPlayers()){
+        for (Player player : this.getAllPlayers()){
             System.out.println(player.toString());
         }
     }
 
     public void createPlayer(String Name) throws SQLException {
         String query = "INSERT INTO PLAYER VALUES(NULL, ?)";
-        PreparedStatement pstmt = getConnection().prepareStatement(query);
+        PreparedStatement pstmt = DatabaseConn.myConn.prepareStatement(query);
         pstmt.setString(1,Name);
         pstmt.executeUpdate();
         System.out.println("player with name: "+Name+" created!");
@@ -43,7 +41,7 @@ public class PlayerDAO extends BaseDAO{
 
     public void deletePlayer(String Name) throws SQLException {
         String query = "DELETE FROM PLAYER WHERE Name = ?";
-        PreparedStatement pstmt = getConnection().prepareStatement(query);
+        PreparedStatement pstmt = DatabaseConn.myConn.prepareStatement(query);
         pstmt.setString(1,Name);
         pstmt.executeUpdate();
         System.out.println("player with name: "+Name+" deleted!");

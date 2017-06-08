@@ -25,10 +25,10 @@ public class SmsResource {
         System.out.println("PMS.PlayerMatchSysteem.webservices.SmsResource");
         JsonArrayBuilder jab = Json.createArrayBuilder();
 
-        for (Game g : td.getAllTournaments()) {
-            JsonObjectBuilder job = buildCountryObject(c);
-            jab.add(job);
-        }
+//        for (Game g : td.getAllTournaments()) {
+//            JsonObjectBuilder job = buildCountryObject(c);
+//            jab.add(job);
+//        }
 
         return jab.build().toString();
 

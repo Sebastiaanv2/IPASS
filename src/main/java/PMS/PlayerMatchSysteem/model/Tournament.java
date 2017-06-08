@@ -40,4 +40,14 @@ public class Tournament {
     public void setEndDate(Date endDate) {
         EndDate = endDate;
     }
+
+    @Override
+    public String toString() {
+        return "Tournament{" +
+                "Tournament_id=" + Tournament_id +
+                ", StartDate=" + StartDate +
+                ", EndDate=" + EndDate +
+                '}';
+    }
+
 }

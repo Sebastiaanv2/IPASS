@@ -6,7 +6,7 @@ import javax.sql.DataSource;
 import java.sql.Connection;
 
 public class BaseDAO {
-    protected final Connection getConnection() {
+    protected final Connection xgetConnection() {
         Connection result = null;
 
         try {
