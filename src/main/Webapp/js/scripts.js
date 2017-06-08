@@ -5,12 +5,6 @@ $(document).ready(function () {
     setDate();
 });
 
-n =  new Date();
-y = n.getFullYear();
-m = n.getMonth() + 1;
-d = n.getDate();
-$("#curdate").innerHTML = m + "/" + d + "/" + y;
-
 var myschemadummy = [
     {"matchid": "51", "speler1": "Michael Prinsen", "speler2": "Sebastiaan van Rijn"},
     {"matchid": "11", "speler1": "Freek Verhoeven", "speler2": "Jan Versteeg"}
@@ -42,7 +36,6 @@ function fillSchema(json) {
             "<td class='text-center'><input class='s1' type='number'></td>" +
             "<td class='text-center'><input class='s2' type='number'></td>" +
             "</tr>";
-
         $("#wSchema").append(schema);
     });
     console.log("fillschema executed");
@@ -60,7 +53,6 @@ function fillStats(json) {
             "<td>" + data.tegenpunten + "</td>" +
             "<td>" + data.matchesGespeeld + "</td>" +
             "</tr>";
-
         $("#Pstats").append(stats);
     });
     console.log("fillstats executed");
@@ -76,7 +68,6 @@ function fillPlayers(json) {
             "<td>" + data.spelernaam + "</td>" +
             "<td class='text-center'><input type='checkbox'></td>" +
             "</tr>";
-
         $("#Plist").append(plyrlist);
     });
     console.log("fillplayers executed");
@@ -96,22 +87,27 @@ $("#scoreSubmit").click(function () {
             var string = "matchid: " + matchid + " | player1 heeft als score: " + s1 + " | player1 heeft als score: " + s2 + "<br>";
         }
         $("#scoreTest").append(string);
-        location.reload();
     });
 });
 
+//skip week
+$("#skipWeek").click(function () {
+    var string = "Skip week!<br>";
+    $("#scoreTest").append(string);
+});
+
 //create new player using input when maak nieuwe speler is clicked
-$("#CreatePlayer").click(function(){
-   var pname = $("#playername").val();
-   console.log(pname);
-   $("#usercreatedtest").append(pname+"<br>");
+$("#CreatePlayer").click(function () {
+    var pname = $("#playername").val();
+    console.log(pname);
+    $("#usercreatedtest").append(pname + "<br>");
 });
 
 //delete players that are checked when verwijder speler(s) is clicked.
 $("#deletePlayer").click(function () {
     $("#Plist").find("tr").each(function () {
         if ($(this).find('input[type="checkbox"]').is(":checked")) {
-            $("#SelectedPlayers").append($(this).find('.spelerid').text()+"<br>");
+            $("#SelectedPlayers").append($(this).find('.spelerid').text() + "<br>");
         }
     });
 });
@@ -128,9 +124,9 @@ $("#Loginbtn").click(function () {
     }
 });
 
-//TODO: fix setDate function
+//
 function setDate() {
-    var n =  new Date();
+    var n = new Date();
     var y = n.getFullYear();
     var m = n.getMonth() + 1;
     var d = n.getDate();

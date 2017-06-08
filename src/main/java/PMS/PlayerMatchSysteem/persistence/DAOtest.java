@@ -12,27 +12,17 @@ public class DAOtest {
         TournamentDAO td = new TournamentDAO();
         GameDAO gd = new GameDAO();
 
-
         //playerDAO test
-        pd.printAllPlayers();
-
-        pd.createPlayer("Johnny Depp");
 
         pd.printAllPlayers();
+        System.out.println();
 
-        pd.deletePlayer("Johnny Depp");
-
-        pd.printAllPlayers();
-
-        //TournamentDAO test
-        td.printAllTournaments();
-
-        //create matches
-        gd.createAllGames(pd.getAllPlayers(),2);
-
-
-
-
+//        //TournamentDAO test
+//        td.createTournament();
+//        td.printAllTournaments();
+//
+//        //create matches
+//        gd.createAllGames(pd.getAllPlayers(),1);
 
         close();
     }

@@ -4,33 +4,10 @@ import PMS.PlayerMatchSysteem.model.Game;
 import PMS.PlayerMatchSysteem.model.Player;
 import PMS.PlayerMatchSysteem.model.Tournament;
 
-import java.sql.Date;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class TournamentDAO extends BaseDAO {
-
-    public Tournament generateTournament() {
-        Tournament tournament = new Tournament();
-
-        try {
-            String query = "INSERT INTO tournament VALUES(null,CURDATE(),null)";
-            Statement stmt = null;
-            stmt = DatabaseConn.myConn.createStatement();
-
-            ResultSet rs = stmt.executeQuery(query);
-            while (rs.next()) {
-
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-
-        return tournament;
-    }
 
     public ArrayList<Tournament> getAllTournaments() {
         ArrayList<Tournament> tournaments = new ArrayList<Tournament>();
@@ -51,6 +28,33 @@ public class TournamentDAO extends BaseDAO {
         }
         return tournaments;
     }
+
+    public void createTournament() {
+        Tournament tournament = new Tournament();
+
+        try {
+            String query = "INSERT INTO tournament VALUES(null,CURDATE(),null)";
+            Statement stmt = null;
+            stmt = DatabaseConn.myConn.createStatement();
+            stmt.executeUpdate(query);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void deleteTournament(int tid){
+        try {
+            String query = "DELETE FROM Tournament WHERE tournament_id = ?";
+            PreparedStatement pstmt = DatabaseConn.myConn.prepareStatement(query);
+            pstmt.setInt(1,tid);
+            pstmt.executeUpdate();
+            System.out.println("tournament with id: "+tid+" deleted!");
+            pstmt.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public void printAllTournaments() throws SQLException {
         for (Tournament tour : this.getAllTournaments()) {

@@ -23,7 +23,6 @@ public class DatabaseConn {
             databasePass = "Welkom01";
             return;
         }
-
         if (System.getProperty("os.name").equals("Windows 10")) {
             this.databaseUrl = "127.0.0.1";
         }

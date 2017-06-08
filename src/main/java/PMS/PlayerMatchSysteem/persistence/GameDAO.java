@@ -102,7 +102,6 @@ public class GameDAO extends BaseDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 
     public void clearGames(int Tournamentid){
@@ -114,6 +113,7 @@ public class GameDAO extends BaseDAO {
             e.printStackTrace();
         }
     }
+
 
 
 }
