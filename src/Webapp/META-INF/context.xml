@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <Resource name="jdbc/MySQL"
+              url="jdbc:mysql://localhost:3306/ipassdb"
+              driverClassName="com.mysql.jdbc.Driver"
+              auth="Container"
+              type="javax.sql.DataSource"
+              username="sebastiaan"
+              password="Welkom01"/>
+</Context>
+

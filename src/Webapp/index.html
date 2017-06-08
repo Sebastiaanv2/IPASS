@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ScoreMatchSysteem</title>
+
+    <meta name="description" content="IPASS Website">
+    <meta name="author" content="Sebastiaan van Rijn">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">ScoreMatchSysteem</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-left">
+                <li class="active"><a data-toggle="tab" href="#Wedstrijdschema">Wedstrijdschema</a></li>
+                <li><a data-toggle="tab" href="#Spelerstatistieken">Spelerstatistieken</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Beheer
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a data-toggle="tab" href="#Nieuwespeler">Nieuwe speler</a></li>
+                        <li><a data-toggle="tab" href="#Spelerverwijderen">Speler verwijderen</a></li>
+                        <li><a data-toggle="tab" href="#RegelsWijzigen">Regels wijzigen</a></li>
+                        <li><a data-toggle="tab" href="#Wachtwoordwijzigen">Masterwachtwoord wijzigen</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a id="curdate">{DATE}</a></li>
+                <li><a id="Login" data-toggle="modal" href="#LoginModal">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="tab-content">
+        <div id="Wedstrijdschema" class="tab-pane fade in active">
+            <div class="jumbotron">
+                <h3 class="text-success">Wedstrijdschema</h3>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                    <tr>
+                        <th class="text-center">
+                            Match
+                        </th>
+                        <th class="text-center">
+                            Speler1
+                        </th>
+                        <th class="text-center">
+                            Speler2
+                        </th>
+                        <th class="text-center">
+                            Score Speler1
+                        </th>
+                        <th class="text-center">
+                            Score Speler2
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody id="wSchema">
+                    </tbody>
+                </table>
+                <div class="text-right">
+                    <div class="btn-group btn-group-sm ">
+                        <button type="button" class="btn btn-primary btn-sm" id="skipWeek">Schuif een week op</button>
+                        <button type="button" class="btn btn-success btn-sm" id="scoreSubmit">Scores opslaan</button>
+                    </div>
+                </div>
+                <div id="scoreTest" class="bg-danger"></div>
+            </div>
+        </div>
+
+        <div id="Spelerstatistieken" class="tab-pane fade">
+            <div class="jumbotron">
+                <h3 class="text-success">Spelerstatistieken</h3>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                    <tr>
+                        <th class="text-center">
+                            Rank
+                        </th>
+                        <th class="text-center">
+                            Spelernaam
+                        </th>
+                        <th class="text-center">
+                            Doelsaldo
+                        </th>
+                        <th class="text-center">
+                            Tegenpunten
+                        </th>
+                        <th class="text-center">
+                            Matches gespeeld
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody id="Pstats">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="Nieuwespeler" class="tab-pane fade">
+            <div class="jumbotron">
+                <h3 class="text-success">Nieuwe speler</h3>
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Nieuwe spelernaam:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="playername" placeholder="spelernaam">
+                        </div>
+                    </div>
+                </form>
+                <div class="text-right">
+                    <button type="button" class="btn btn-success btn-sm" id="CreatePlayer">Maak nieuwe speler</button>
+                </div>
+                <div id="usercreatedtest" class="text-success"></div>
+            </div>
+        </div>
+
+        <div id="Spelerverwijderen" class="tab-pane fade">
+            <div class="jumbotron">
+                <h3 class="text-success">Speler verwijderen</h3>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                    <tr>
+                        <th class="text-center">
+                            Speler-id
+                        </th>
+                        <th class="text-center">
+                            Spelernaam
+                        </th>
+                        <th class="text-center">
+                            Verwijderen?
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody id="Plist">
+                    </tbody>
+                </table>
+                <div class="text-right">
+                    <button type="button" class="btn btn-success btn-sm" id="deletePlayer">Verwijder Speler(s)</button>
+                </div>
+                <div class="bg-success" id="SelectedPlayers"></div>
+            </div>
+        </div>
+
+        <div id="RegelsWijzigen" class="tab-pane fade">
+            <div class="jumbotron">
+                <h3 class="text-success">Regels wijzigen</h3>
+                <div class="input-group">
+                    <span class="input-group-addon">Win je van iemand boven je in de ranking krijg je</span>
+                    <input type="number" step="any" class="form-control" id="rule1" placeholder="3">
+                    <span class="input-group-addon">punten.</span>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">Win je van iemand onder je in de ranking krijg je</span>
+                    <input type="number" step="any" class="form-control" id="rule2" placeholder="2">
+                    <span class="input-group-addon">punten.</span>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">Verlies je van iemand boven je in de ranking dan krijg je</span>
+                    <input type="number" step="any" class="form-control" id="rule3" placeholder="0.5">
+                    <span class="input-group-addon">punten.</span>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">Verlies je van iemand onder je in de ranking krijg je</span>
+                    <input type="number" step="any" class="form-control" id="rule4" placeholder="0">
+                    <span class="input-group-addon">punten.</span>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">Win je van iemand met 11-0 dan krijg je</span>
+                    <input type="number" step="any" class="form-control" id="rule5" placeholder="2">
+                    <span class="input-group-addon">punten.</span>
+                </div>
+                <br>
+                <div class="text-right">
+                    <button type="button" class="btn btn-success btn-sm" id="saverules">Regels opslaan</button>
+                </div>
+                <div class="bg-success" id="newrules"></div>
+            </div>
+        </div>
+
+        <div id="Wachtwoordwijzigen" class="tab-pane fade">
+            <div class="jumbotron">
+                <h3 class="text-success">Speler verwijderen</h3>
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Masterwachtwoord:</label>
+                        <div class="col-sm-8">
+                            <input type="password" class="form-control" id="pass_old" placeholder="masterwachtwoord">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Nieuw masterwachtwoord:</label>
+                        <div class="col-sm-8">
+                            <input type="password" class="form-control" id="pass_new"
+                                   placeholder="nieuw masterwachtwoord">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Bevestig nieuw masterwachtwoord:</label>
+                        <div class="col-sm-8">
+                            <input type="password" class="form-control" id="pass_new2"
+                                   placeholder="nieuw masterwachtwoord2">
+                        </div>
+                    </div>
+                </form>
+                <div class="text-right">
+                    <button type="button" class="btn btn-success btn-sm" id="SavePass">Wachtwoord opslaan</button>
+                </div>
+                <div class="bg-success" id="newPassword"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="LoginModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <label class="text-center">Masterwachtwoord:</label><br>
+                        <input type="password" id="loginpass" placeholder="masterwachtwoord">
+                        <div id="passwordcheck" class="text-danger"></div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Annuleren</button>
+                        <button type="button" class="btn btn-success btn-sm" id="Loginbtn">Inloggen</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>
+
