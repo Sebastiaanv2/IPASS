@@ -41,7 +41,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a id="curdate">{DATE}</a></li>
-                <li><a id="Login" data-toggle="modal" href="#LoginModal">Login</a></li>
+                <li><a id="Login" class="bg-danger" data-toggle="modal" href="#LoginModal">Login</a></li>
             </ul>
         </div>
     </nav>
@@ -50,6 +50,13 @@
         <div id="Wedstrijdschema" class="tab-pane fade in active">
             <div class="jumbotron">
                 <h3 class="text-success">Wedstrijdschema</h3>
+                <p>Op deze pagina kunnen de scores worden opgegeven voor de te spelen games. Het is mogelijk om het
+                    huidige tournament te herstarten. Ook is het mogelijk om de games door te schuiven in weken.</p>
+                <div class="text-right">
+                    <a id="weekleft" href="#"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                    <a id="weeknr">Week {}</a>
+                    <a id="weekright" href="#"><span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
                 <table class="table table-bordered table-striped">
                     <thead>
                     <tr>
@@ -75,17 +82,23 @@
                 </table>
                 <div class="text-right">
                     <div class="btn-group btn-group-sm ">
+                        <button type="button" class="btn btn-primary btn-sm" id="RestartTournament">Herstart
+                            Tournament
+                        </button>
                         <button type="button" class="btn btn-primary btn-sm" id="skipWeek">Schuif een week op</button>
                         <button type="button" class="btn btn-success btn-sm" id="scoreSubmit">Scores opslaan</button>
                     </div>
                 </div>
-                <div id="scoreTest" class="bg-danger"></div>
+                <div class="bg-success" id="scoresuccess"></div>
+                <div class="bg-danger" id="scoreerror"></div>
             </div>
         </div>
 
         <div id="Spelerstatistieken" class="tab-pane fade">
             <div class="jumbotron">
                 <h3 class="text-success">Spelerstatistieken</h3>
+                <p>Op deze pagina is een overzicht te zien van de statistieken van de spelers die games hebben
+                    gespeeld.</p>
                 <table class="table table-bordered table-striped">
                     <thead>
                     <tr>
@@ -94,6 +107,9 @@
                         </th>
                         <th class="text-center">
                             Spelernaam
+                        </th>
+                        <th class="text-center">
+                            Punten
                         </th>
                         <th class="text-center">
                             Doelsaldo
@@ -115,10 +131,13 @@
         <div id="Nieuwespeler" class="tab-pane fade">
             <div class="jumbotron">
                 <h3 class="text-success">Nieuwe speler</h3>
+                <p>Op deze pagina kunnen nieuwe spelers worden aangemaakt doormiddel van het invullen van een naam voor
+                    de speler. Nadat deze speler is aangemaakt zal het systeem automatisch de benodigde games voor de
+                    nieuwe speler genereren.</p>
                 <form class="form-horizontal">
                     <div class="form-group">
-                        <label class="control-label col-sm-3">Nieuwe spelernaam:</label>
-                        <div class="col-sm-9">
+                        <label class="control-label col-sm-2">Nieuwe spelernaam:</label>
+                        <div class="col-sm-10">
                             <input type="text" class="form-control" id="playername" placeholder="spelernaam">
                         </div>
                     </div>
@@ -126,13 +145,17 @@
                 <div class="text-right">
                     <button type="button" class="btn btn-success btn-sm" id="CreatePlayer">Maak nieuwe speler</button>
                 </div>
-                <div id="usercreatedtest" class="text-success"></div>
+                <div id="usercreatedsuccess" class="bg-success"></div>
+                <div id="usercreatederror" class="bg-danger"></div>
             </div>
         </div>
 
         <div id="Spelerverwijderen" class="tab-pane fade">
             <div class="jumbotron">
                 <h3 class="text-success">Speler verwijderen</h3>
+                <p>Op deze pagina kunnen spelers verwijderd worden doormiddel van het aanvinken van de spelers die
+                    verwijderd dienen te worden. Nadat de speler is verwijderd worden automatisch ook de bijbehorende
+                    games en stats verwijderd. ER KUNNEN NIET MINDER DAN 1 SPELER BESTAAN.</p>
                 <table class="table table-bordered table-striped">
                     <thead>
                     <tr>
@@ -153,49 +176,53 @@
                 <div class="text-right">
                     <button type="button" class="btn btn-success btn-sm" id="deletePlayer">Verwijder Speler(s)</button>
                 </div>
-                <div class="bg-success" id="SelectedPlayers"></div>
+                <div id="delplayersuccess" class="bg-success"></div>
+                <div id="delplayererror" class="bg-danger"></div>
             </div>
         </div>
 
         <div id="RegelsWijzigen" class="tab-pane fade">
+            <p>Op deze pagina kunnen de punten die behaald worden voor de desbetreffende regels worden gewijzigd.</p>
             <div class="jumbotron">
                 <h3 class="text-success">Regels wijzigen</h3>
                 <div class="input-group">
                     <span class="input-group-addon">Win je van iemand boven je in de ranking krijg je</span>
-                    <input type="number" step="any" class="form-control" id="rule1" placeholder="3">
+                    <input type="number" step="any" class="form-control" id="rule1" placeholder="error">
                     <span class="input-group-addon">punten.</span>
                 </div>
                 <div class="input-group">
                     <span class="input-group-addon">Win je van iemand onder je in de ranking krijg je</span>
-                    <input type="number" step="any" class="form-control" id="rule2" placeholder="2">
+                    <input type="number" step="any" class="form-control" id="rule2" placeholder="error">
                     <span class="input-group-addon">punten.</span>
                 </div>
                 <div class="input-group">
                     <span class="input-group-addon">Verlies je van iemand boven je in de ranking dan krijg je</span>
-                    <input type="number" step="any" class="form-control" id="rule3" placeholder="0.5">
+                    <input type="number" step="any" class="form-control" id="rule3" placeholder="error">
                     <span class="input-group-addon">punten.</span>
                 </div>
                 <div class="input-group">
                     <span class="input-group-addon">Verlies je van iemand onder je in de ranking krijg je</span>
-                    <input type="number" step="any" class="form-control" id="rule4" placeholder="0">
+                    <input type="number" step="any" class="form-control" id="rule4" placeholder="error">
                     <span class="input-group-addon">punten.</span>
                 </div>
                 <div class="input-group">
                     <span class="input-group-addon">Win je van iemand met 11-0 dan krijg je</span>
-                    <input type="number" step="any" class="form-control" id="rule5" placeholder="2">
+                    <input type="number" step="any" class="form-control" id="rule5" placeholder="error">
                     <span class="input-group-addon">punten.</span>
                 </div>
                 <br>
                 <div class="text-right">
                     <button type="button" class="btn btn-success btn-sm" id="saverules">Regels opslaan</button>
                 </div>
-                <div class="bg-success" id="newrules"></div>
+                <div class="bg-success" id="regelssucces"></div>
+                <div class="bg-danger" id="regelserror"></div>
             </div>
         </div>
 
         <div id="Wachtwoordwijzigen" class="tab-pane fade">
             <div class="jumbotron">
-                <h3 class="text-success">Speler verwijderen</h3>
+                <h3 class="text-success">Wachtwoord wijzigen</h3>
+                <p>Op deze pagina kan het masterwachtwoord worden gewijzigd.</p>
                 <form class="form-horizontal">
                     <div class="form-group">
                         <label class="control-label col-sm-4">Masterwachtwoord:</label>
@@ -213,7 +240,7 @@
                     <div class="form-group">
                         <label class="control-label col-sm-4">Bevestig nieuw masterwachtwoord:</label>
                         <div class="col-sm-8">
-                            <input type="password" class="form-control" id="pass_new2"
+                            <input type="password" class="form-control" id="pass_new1"
                                    placeholder="nieuw masterwachtwoord2">
                         </div>
                     </div>
@@ -221,43 +248,105 @@
                 <div class="text-right">
                     <button type="button" class="btn btn-success btn-sm" id="SavePass">Wachtwoord opslaan</button>
                 </div>
-                <div class="bg-success" id="newPassword"></div>
+                <div class="bg-success" id="passsuccess"></div>
+                <div class="bg-danger" id="passerror"></div>
             </div>
         </div>
     </div>
 
-    <div class="modal fade" id="LoginModal" role="dialog">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Login</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="text-center">
-                        <label class="text-center">Masterwachtwoord:</label><br>
-                        <input type="password" id="loginpass" placeholder="masterwachtwoord">
-                        <div id="passwordcheck" class="text-danger"></div>
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="header-text hidden-xs">
+                    <div class="col-md-12 text-center">
+                        <h4>
+                            <span id="r1slide">slide1</span>
+                        </h4>
                     </div>
-
                 </div>
-                <div class="modal-footer">
-                    <div class="btn-group btn-group-sm">
-                        <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Annuleren</button>
-                        <button type="button" class="btn btn-success btn-sm" id="Loginbtn">Inloggen</button>
+            </div>
+            <div class="item">
+                <div class="header-text hidden-xs">
+                    <div class="col-md-12 text-center">
+                        <h4>
+                            <span id="r2slide">slide2</span>
+                        </h4>
                     </div>
-
+                </div>
+            </div>
+            <div class="item">
+                <div class="header-text hidden-xs">
+                    <div class="col-md-12 text-center">
+                        <h4>
+                            <span id="r3slide">slide2</span>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="header-text hidden-xs">
+                    <div class="col-md-12 text-center">
+                        <h4>
+                            <span id="r4slide">slide2</span>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="header-text hidden-xs">
+                    <div class="col-md-12 text-center">
+                        <h4>
+                            <span id="r5slide">slide2</span>
+                        </h4>
+                    </div>
                 </div>
             </div>
 
         </div>
-    </div>
-</div>
 
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/scripts.js"></script>
+        <div class="modal fade" id="LoginModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Login</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center">
+                            <form id="loginform">
+                                <label class="text-center">Masterwachtwoord:</label><br>
+                                <input type="password" id="loginpass" placeholder="masterwachtwoord">
+                            </form>
+                            <div id="passwordcheck" class="text-danger"></div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <div class="btn-group btn-group-sm">
+                            <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Annuleren</button>
+                            <button type="button" class="btn btn-success btn-sm" id="Loginbtn">Inloggen</button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/scripts.js"></script>
 
 </body>
 </html>

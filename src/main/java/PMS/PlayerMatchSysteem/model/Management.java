@@ -18,6 +18,18 @@ public class Management {
         Masterpassword = masterpassword;
     }
 
+    public Management(String masterpassword) {
+        Masterpassword = masterpassword;
+    }
+
+    public Management(double rule1, double rule2, double rule3, double rule4, double rule5) {
+        Rule1 = rule1;
+        Rule2 = rule2;
+        Rule3 = rule3;
+        Rule4 = rule4;
+        Rule5 = rule5;
+    }
+
     public Management(){}
 
     public double getRule1() {

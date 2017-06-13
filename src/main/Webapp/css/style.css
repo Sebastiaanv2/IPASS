@@ -6,3 +6,7 @@
     text-align: center;
     margin:0 auto;
 }
+
+.jumbotron p {
+    font-size: 16px;
+}
