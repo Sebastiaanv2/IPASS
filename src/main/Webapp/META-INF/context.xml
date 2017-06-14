@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context>
-    <Resource name="jdbc/MySQL"
-              url="jdbc:mysql://localhost:3306/ipassdb"
-              driverClassName="com.mysql.jdbc.Driver"
+    <Resource name="jdbc/Postgres"
+              url="jdbc:postgresql://localhost:5432/ipassdb"
+              driverClassName="org.postgresql.Driver"
               auth="Container"
               type="javax.sql.DataSource"
-              username="root"
+              username="postgres"
               password="Welkom01"/>
+
 </Context>
+
+<!--<Context>-->
+<!--<Resource name="jdbc/MySQL"-->
+          <!--url="jdbc:mysql://localhost:3306/ipassdb"-->
+          <!--driverClassName="com.mysql.jdbc.Driver"-->
+          <!--auth="Container"-->
+          <!--type="javax.sql.DataSource"-->
+          <!--username="root"-->
+          <!--password="Welkom01"/>-->
+<!--</Context>-->

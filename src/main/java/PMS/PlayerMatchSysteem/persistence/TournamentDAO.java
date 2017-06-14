@@ -38,7 +38,7 @@ public class TournamentDAO extends BaseDAO {
         int tid = 0;
         try {
             Connection con = super.getConnection();
-            String query = "INSERT INTO tournament VALUES(null,CURDATE(),null)";
+            String query = "INSERT INTO tournament VALUES(DEFAULT ,current_date,null)";
             PreparedStatement pstmt = con.prepareStatement(query);
             pstmt.executeUpdate();
             pstmt.close();
@@ -93,23 +93,5 @@ public class TournamentDAO extends BaseDAO {
         }
         return success;
     }
-
-//    public boolean deleteGamesForTournament(int tid) {
-//        boolean success = false;
-//        try {
-//            Connection con = super.getConnection();
-//            String query = "DELETE FROM game WHERE tournament_id = ?";
-//            PreparedStatement pstmt = con.prepareStatement(query);
-//            pstmt.setInt(1, tid);
-//            pstmt.executeUpdate();
-//            pstmt.close();
-//            con.close();
-//            System.out.println("games for tournament with id " + tid + " removed!");
-//            success = true;
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//        return success;
-//    }
 
 }

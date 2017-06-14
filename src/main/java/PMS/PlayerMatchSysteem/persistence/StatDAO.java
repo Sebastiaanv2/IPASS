@@ -59,7 +59,7 @@ public class StatDAO extends BaseDAO {
         int tid = td.getNewestTournament();
         try {
             Connection con = super.getConnection();
-            String query = "INSERT INTO stat (Stat_id, Player1_Score, Player2_Score, Game_id, Player1_Punten, Player2_Punten, Tournament_id) VALUES (NULL,?,?,?,?,?,?)";
+            String query = "INSERT INTO stat (Stat_id, Player1_Score, Player2_Score, Game_id, Player1_Punten, Player2_Punten, Tournament_id) VALUES (DEFAULT ,?,?,?,?,?,?)";
             PreparedStatement pstmt = con.prepareStatement(query);
             pstmt.setDouble(1, p1s);
             pstmt.setDouble(2, p2s);

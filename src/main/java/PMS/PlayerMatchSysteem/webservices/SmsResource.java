@@ -115,9 +115,11 @@ public class SmsResource {
     @Path("/newplayer/{name}")
     public Response createNewPlayer(@PathParam("name") String name) {
         PlayerDAO pd = new PlayerDAO();
+        GameDAO gd = new GameDAO();
 
         boolean success = false;
         success = pd.createPlayer(name);
+        gd.shuffleGames();
 
         if (success) {
             return Response.ok().build();
@@ -176,6 +178,7 @@ public class SmsResource {
             System.out.println("no tournaments to delete skipping delete...");
         }
         success = gd.createAllGames();
+        gd.shuffleGames();
         if (success) {
             return Response.ok().build();
         }

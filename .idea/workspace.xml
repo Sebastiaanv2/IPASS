@@ -2,23 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1cc40930-aa34-4a7c-b05b-b0380b1d2884" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/webservices/AuthenticationFilter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/webservices/AuthenticationResource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/webservices/MySecurityContext.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/Webapp/WEB-INF/lib/mysql-connector-java-5.1.42-bin.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/DAOtest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/DatabaseConn.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/Main_offline.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Webapp/META-INF/context.xml" afterPath="$PROJECT_DIR$/src/main/Webapp/META-INF/context.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Webapp/css/bootstrap.css" afterPath="$PROJECT_DIR$/src/main/Webapp/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Webapp/css/style.css" afterPath="$PROJECT_DIR$/src/main/Webapp/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Webapp/index.html" afterPath="$PROJECT_DIR$/src/main/Webapp/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Webapp/js/scripts.js" afterPath="$PROJECT_DIR$/src/main/Webapp/js/scripts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/model/Game.java" afterPath="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/model/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/model/Management.java" afterPath="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/model/Management.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/model/Stat.java" afterPath="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/model/Stat.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/BaseDAO.java" afterPath="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/BaseDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/GameDAO.java" afterPath="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/GameDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/ManagementDAO.java" afterPath="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/ManagementDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/PlayerDAO.java" afterPath="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/PlayerDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/StatDAO.java" afterPath="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/StatDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/TournamentDAO.java" afterPath="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/TournamentDAO.java" />
@@ -36,22 +27,59 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ManagementDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/ManagementDAO.java">
+      <file leaf-file-name="GameDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/GameDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2820">
-              <caret line="141" column="0" lean-forward="true" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+            <state relative-caret-position="-288">
+              <caret line="94" column="34" lean-forward="true" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1497376826570" expanded="true" signature="461:517" ph="SELECT `Rule... management" />
-                <marker date="1497376826570" expanded="true" signature="1367:1398" ph="UPDATE manag... " />
-                <marker date="1497376826570" expanded="true" signature="1895:1926" ph="UPDATE manag... " />
-                <marker date="1497376826570" expanded="true" signature="2423:2454" ph="UPDATE manag... " />
-                <marker date="1497376826570" expanded="true" signature="2951:2982" ph="UPDATE manag... " />
-                <marker date="1497376826570" expanded="true" signature="3479:3510" ph="UPDATE manag... " />
-                <marker date="1497376826570" expanded="true" signature="4048:4123" ph="UPDATE manag... " />
-                <marker date="1497376826570" expanded="true" signature="4743:4780" ph="SELECT maste... management" />
-                <marker date="1497376826570" expanded="true" signature="5389:5429" ph="UPDATE manag... " />
+                <marker date="1497452600013" expanded="true" signature="466:523" ph="Select * fro... game" />
+                <marker date="1497452600013" expanded="true" signature="466:529" ph="Select Tourn... game" />
+                <marker date="1497452600013" expanded="true" signature="466:542" ph="Select Tourn... game" />
+                <marker date="1497452600013" expanded="true" signature="466:543" ph="Select Tourn... game" />
+                <marker date="1497452600013" expanded="true" signature="1359:1583" ph="SELECT g.Tou... game" />
+                <marker date="1497452600013" expanded="true" signature="1359:1636" ph="SELECT g.Tou... game" />
+                <marker date="1497452600013" expanded="true" signature="3212:3255" ph="INSERT INTO game... " />
+                <marker date="1497452600013" expanded="true" signature="3936:3970" ph="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SmsResource.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/webservices/SmsResource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="117" column="35" lean-forward="false" selection-start-line="117" selection-start-column="35" selection-end-line="117" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#allPlayer#0;class#SmsResource#0" expanded="false" />
+                <element signature="method#allGames#0;class#SmsResource#0" expanded="false" />
+                <element signature="method#allRules#0;class#SmsResource#0" expanded="false" />
+                <element signature="method#allStats#0;class#SmsResource#0" expanded="false" />
+                <element signature="method#changeRules#0;class#SmsResource#0" expanded="false" />
+                <element signature="method#deletePlayer#0;class#SmsResource#0" expanded="false" />
+                <element signature="method#submitScore#0;class#SmsResource#0" expanded="false" />
+                <element signature="method#restart#0;class#SmsResource#0" expanded="false" />
+                <element signature="method#ChangePass#0;class#SmsResource#0" expanded="false" />
+                <element signature="method#stringToJson#0;class#SmsResource#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayerDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/PlayerDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="712">
+              <caret line="91" column="0" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1497452748679" expanded="true" signature="409:429" ph="SELECT * FRO... PLAYER" />
+                <marker date="1497452748679" expanded="true" signature="1155:1193" ph="INSERT INTO PLAYER... " />
+                <marker date="1497452748679" expanded="true" signature="1495:1547" ph="SELECT * FRO... tournament" />
+                <marker date="1497452748679" expanded="true" signature="2188:2226" ph="DELETE FROM " />
               </folding>
             </state>
           </provider>
@@ -60,8 +88,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Webapp/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="54" column="40" lean-forward="true" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
+            <state relative-caret-position="531">
+              <caret line="67" column="35" lean-forward="true" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
               <folding>
                 <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -76,36 +104,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayerDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/PlayerDAO.java">
+      <file leaf-file-name="context.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Webapp/META-INF/context.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding>
-                <marker date="1497224823160" expanded="true" signature="409:429" ph="SELECT * FRO... PLAYER" />
-                <marker date="1497224823160" expanded="true" signature="1155:1189" ph="INSERT INTO PLAYER... " />
-                <marker date="1497224823160" expanded="true" signature="1491:1543" ph="SELECT * FRO... tournament" />
-                <marker date="1497224823160" expanded="true" signature="2184:2222" ph="DELETE FROM " />
-                <marker date="1497224823160" expanded="true" signature="2787:2836" ph="DELETE FROM " />
-              </folding>
+            <state relative-caret-position="40">
+              <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="33" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/GameDAO.java">
+      <file leaf-file-name="StatDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/StatDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+            <state relative-caret-position="514">
+              <caret line="57" column="47" lean-forward="true" selection-start-line="57" selection-start-column="47" selection-end-line="57" selection-end-column="47" />
               <folding>
-                <marker date="1497311575092" expanded="true" signature="466:523" ph="Select * fro... game" />
-                <marker date="1497311575092" expanded="true" signature="466:529" ph="Select Tourn... game" />
-                <marker date="1497311575092" expanded="true" signature="466:542" ph="Select Tourn... game" />
-                <marker date="1497311575092" expanded="true" signature="466:543" ph="Select Tourn... game" />
-                <marker date="1497311575092" expanded="true" signature="1359:1583" ph="SELECT g.Tou... game" />
-                <marker date="1497311575092" expanded="true" signature="1359:1636" ph="SELECT g.Tou... game" />
-                <marker date="1497311575092" expanded="true" signature="3212:3256" ph="INSERT INTO game... " />
-                <marker date="1497311575092" expanded="true" signature="3937:3971" ph="DELETE FROM " />
+                <element signature="imports" expanded="true" />
+                <marker date="1497452980054" expanded="true" signature="493:1748" ph="SELECT playe... name" />
+                <marker date="1497452980054" expanded="true" signature="585:1647" ph="SELECT name Game_id" />
+                <marker date="1497452980054" expanded="true" signature="757:1118" ph="SELECT g.Gam... game" />
+                <marker date="1497452980054" expanded="true" signature="1191:1552" ph="SELECT g.Gam... game" />
+                <marker date="1497452980054" expanded="true" signature="2833:2975" ph="INSERT INTO stat... " />
+                <marker date="1497452980054" expanded="true" signature="3352:3399" ph="UPDATE game " />
               </folding>
             </state>
           </provider>
@@ -114,105 +135,26 @@
       <file leaf-file-name="TournamentDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/TournamentDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-              <folding>
-                <marker date="1497224823181" expanded="true" signature="410:434" ph="Select * fro... tournament" />
-                <marker date="1497224823181" expanded="true" signature="1332:1382" ph="INSERT INTO tournament... " />
-                <marker date="1497224823181" expanded="true" signature="1543:1603" ph="SELECT * FRO... tournament" />
-                <marker date="1497224823181" expanded="true" signature="2130:2190" ph="SELECT * FRO... tournament" />
-                <marker date="1497224823181" expanded="true" signature="2789:2835" ph="DELETE FROM " />
-                <marker date="1497224823181" expanded="true" signature="3403:3443" ph="DELETE FROM " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scripts.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Webapp/js/scripts.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="212" column="21" lean-forward="true" selection-start-line="212" selection-start-column="21" selection-end-line="212" selection-end-column="21" />
-              <folding>
-                <element signature="e#429#598#0" expanded="false" />
-                <element signature="e#620#995#0" expanded="false" />
-                <element signature="e#1019#1357#0" expanded="false" />
-                <element signature="n#!!block;n#fillSchema#0" expanded="false" />
-                <element signature="n#!!block;n#fillStats#0" expanded="false" />
-                <element signature="n#!!block;n#fillPlayers#0" expanded="false" />
-                <element signature="n#!!block;n#fillRules#0" expanded="false" />
-                <element signature="e#11536#12010#0" expanded="false" />
-                <element signature="e#12059#12133#0" expanded="false" />
-                <element signature="e#12242#12950#0" expanded="false" />
-                <element signature="e#13062#13439#0" expanded="false" />
-                <element signature="n#!!block;n#deleteplayer#0" expanded="false" />
-                <element signature="e#14288#15588#0" expanded="false" />
-                <element signature="e#14341#14394#0" expanded="false" />
-                <element signature="e#14446#14499#0" expanded="false" />
-                <element signature="e#14551#14604#0" expanded="false" />
-                <element signature="e#14656#14709#0" expanded="false" />
-                <element signature="e#14761#14814#0" expanded="false" />
-                <element signature="e#15702#16644#0" expanded="false" />
-                <element signature="e#16735#17824#0" expanded="false" />
-                <element signature="n#!!block;n#setDate#0" expanded="false" />
-                <element signature="n#!!block;n#buildSuccessErrorMsg#0" expanded="false" />
-                <element signature="n#!!block;n#buildSuccessErrorMsgappend#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StatDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/StatDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="1880">
+              <caret line="94" column="5" lean-forward="false" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#setStat#0;class#StatDAO#0" expanded="false" />
-                <marker date="1497391038285" expanded="true" signature="493:1748" ph="SELECT playe... name" />
-                <marker date="1497391038285" expanded="true" signature="585:1647" ph="SELECT name Game_id" />
-                <marker date="1497391038285" expanded="true" signature="757:1118" ph="SELECT g.Gam... game" />
-                <marker date="1497391038285" expanded="true" signature="1191:1552" ph="SELECT g.Gam... game" />
-                <marker date="1497391038285" expanded="true" signature="2833:2971" ph="INSERT INTO stat... " />
-                <marker date="1497391038285" expanded="true" signature="3348:3395" ph="UPDATE game " />
+                <marker date="1497452852095" expanded="true" signature="410:434" ph="Select * fro... tournament" />
+                <marker date="1497452852095" expanded="true" signature="1332:1389" ph="INSERT INTO tournament... " />
+                <marker date="1497452852095" expanded="true" signature="1550:1610" ph="SELECT * FRO... tournament" />
+                <marker date="1497452852095" expanded="true" signature="2137:2197" ph="SELECT * FRO... tournament" />
+                <marker date="1497452852095" expanded="true" signature="2796:2842" ph="DELETE FROM " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SmsResource.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/webservices/SmsResource.java">
+      <file leaf-file-name="BaseDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/BaseDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#allPlayer#0;class#SmsResource#0" expanded="false" />
-                <element signature="method#allGames#0;class#SmsResource#0" expanded="false" />
-                <element signature="method#allRules#0;class#SmsResource#0" expanded="false" />
-                <element signature="method#allStats#0;class#SmsResource#0" expanded="false" />
-                <element signature="method#changeRules#0;class#SmsResource#0" expanded="false" />
-                <element signature="method#createNewPlayer#0;class#SmsResource#0" expanded="false" />
-                <element signature="method#deletePlayer#0;class#SmsResource#0" expanded="false" />
-                <element signature="method#submitScore#0;class#SmsResource#0" expanded="false" />
-                <element signature="method#restart#0;class#SmsResource#0" expanded="false" />
-                <element signature="method#ChangePass#0;class#SmsResource#0" expanded="false" />
-                <element signature="method#stringToJson#0;class#SmsResource#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/model/Game.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-              <folding>
-                <element signature="method#Game#2;class#Game#0" expanded="false" />
-                <element signature="method#toString#0;class#Game#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="440">
+              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -288,25 +230,25 @@
         <option value="$PROJECT_DIR$/errorpage.html" />
         <option value="$PROJECT_DIR$/src/main/Webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/DatabaseConn.java" />
-        <option value="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/BaseDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/Webapp/META-INF/context.xml" />
         <option value="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/model/Game.java" />
         <option value="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/model/Management.java" />
         <option value="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/DAOtest.java" />
         <option value="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/model/Player.java" />
-        <option value="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/TournamentDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/PlayerDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/GameDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/model/Stat.java" />
         <option value="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/webservices/MySecurityContext.java" />
         <option value="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/ManagementDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/webservices/AuthenticationResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/webservices/SmsResource.java" />
-        <option value="$PROJECT_DIR$/src/main/Webapp/js/scripts.js" />
-        <option value="$PROJECT_DIR$/src/main/Webapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/Webapp/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/src/main/Webapp/css/style.css" />
+        <option value="$PROJECT_DIR$/src/main/Webapp/js/scripts.js" />
+        <option value="$PROJECT_DIR$/src/main/Webapp/index.html" />
+        <option value="$PROJECT_DIR$/src/main/Webapp/META-INF/context.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/BaseDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/GameDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/PlayerDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/TournamentDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/StatDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/webservices/SmsResource.java" />
       </list>
     </option>
   </component>
@@ -465,36 +407,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="persistence" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PlayerMatchSysteem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PlayerMatchSysteem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PlayerMatchSysteem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1086,7 +998,7 @@
       <workItem from="1496742784252" duration="11939000" />
       <workItem from="1496951197902" duration="41703000" />
       <workItem from="1497200041295" duration="16352000" />
-      <workItem from="1497302747575" duration="23752000" />
+      <workItem from="1497302747575" duration="26861000" />
     </task>
     <task id="LOCAL-00001" summary="alot">
       <created>1496753154030</created>
@@ -1116,11 +1028,18 @@
       <option name="project" value="LOCAL" />
       <updated>1496963353208</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="almost done">
+      <created>1497391070832</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1497391070832</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102702000" />
+    <option name="totallyTimeSpent" value="105811000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -1133,6 +1052,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1156,7 +1076,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23510292" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21748401" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21748401" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1179,7 +1099,8 @@
     <MESSAGE value="alot" />
     <MESSAGE value="Nieuwe website geimplementeerd" />
     <MESSAGE value="working on backend" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on backend" />
+    <MESSAGE value="almost done" />
+    <option name="LAST_COMMIT_MESSAGE" value="almost done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1218,11 +1139,11 @@
         <state relative-caret-position="924">
           <caret line="50" column="56" lean-forward="false" selection-start-line="50" selection-start-column="56" selection-end-line="50" selection-end-column="56" />
           <folding>
-            <marker date="1497224823160" expanded="true" signature="409:429" ph="SELECT * FRO... PLAYER" />
-            <marker date="1497224823160" expanded="true" signature="1155:1189" ph="INSERT INTO PLAYER... " />
-            <marker date="1497224823160" expanded="true" signature="1491:1543" ph="SELECT * FRO... tournament" />
-            <marker date="1497224823160" expanded="true" signature="2184:2222" ph="DELETE FROM " />
-            <marker date="1497224823160" expanded="true" signature="2787:2836" ph="DELETE FROM " />
+            <element signature="imports" expanded="true" />
+            <marker date="1497452748679" expanded="true" signature="409:429" ph="SELECT * FRO... PLAYER" />
+            <marker date="1497452748679" expanded="true" signature="1155:1193" ph="INSERT INTO PLAYER... " />
+            <marker date="1497452748679" expanded="true" signature="1495:1547" ph="SELECT * FRO... tournament" />
+            <marker date="1497452748679" expanded="true" signature="2188:2226" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -1259,11 +1180,11 @@
         <state relative-caret-position="924">
           <caret line="50" column="56" lean-forward="false" selection-start-line="50" selection-start-column="56" selection-end-line="50" selection-end-column="56" />
           <folding>
-            <marker date="1497224823160" expanded="true" signature="409:429" ph="SELECT * FRO... PLAYER" />
-            <marker date="1497224823160" expanded="true" signature="1155:1189" ph="INSERT INTO PLAYER... " />
-            <marker date="1497224823160" expanded="true" signature="1491:1543" ph="SELECT * FRO... tournament" />
-            <marker date="1497224823160" expanded="true" signature="2184:2222" ph="DELETE FROM " />
-            <marker date="1497224823160" expanded="true" signature="2787:2836" ph="DELETE FROM " />
+            <element signature="imports" expanded="true" />
+            <marker date="1497452748679" expanded="true" signature="409:429" ph="SELECT * FRO... PLAYER" />
+            <marker date="1497452748679" expanded="true" signature="1155:1193" ph="INSERT INTO PLAYER... " />
+            <marker date="1497452748679" expanded="true" signature="1495:1547" ph="SELECT * FRO... tournament" />
+            <marker date="1497452748679" expanded="true" signature="2188:2226" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -1418,20 +1339,6 @@
         <state relative-caret-position="280">
           <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Webapp/META-INF/context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/BaseDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="31" lean-forward="false" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -1785,6 +1692,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="29" column="22" lean-forward="true" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1868,55 +1776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Webapp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="54" column="40" lean-forward="true" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
-          <folding>
-            <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#5;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Webapp/js/scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="212" column="21" lean-forward="true" selection-start-line="212" selection-start-column="21" selection-end-line="212" selection-end-column="21" />
-          <folding>
-            <element signature="e#429#598#0" expanded="false" />
-            <element signature="e#620#995#0" expanded="false" />
-            <element signature="e#1019#1357#0" expanded="false" />
-            <element signature="n#!!block;n#fillSchema#0" expanded="false" />
-            <element signature="n#!!block;n#fillStats#0" expanded="false" />
-            <element signature="n#!!block;n#fillPlayers#0" expanded="false" />
-            <element signature="n#!!block;n#fillRules#0" expanded="false" />
-            <element signature="e#11536#12010#0" expanded="false" />
-            <element signature="e#12059#12133#0" expanded="false" />
-            <element signature="e#12242#12950#0" expanded="false" />
-            <element signature="e#13062#13439#0" expanded="false" />
-            <element signature="n#!!block;n#deleteplayer#0" expanded="false" />
-            <element signature="e#14288#15588#0" expanded="false" />
-            <element signature="e#14341#14394#0" expanded="false" />
-            <element signature="e#14446#14499#0" expanded="false" />
-            <element signature="e#14551#14604#0" expanded="false" />
-            <element signature="e#14656#14709#0" expanded="false" />
-            <element signature="e#14761#14814#0" expanded="false" />
-            <element signature="e#15702#16644#0" expanded="false" />
-            <element signature="e#16735#17824#0" expanded="false" />
-            <element signature="n#!!block;n#setDate#0" expanded="false" />
-            <element signature="n#!!block;n#buildSuccessErrorMsg#0" expanded="false" />
-            <element signature="n#!!block;n#buildSuccessErrorMsgappend#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/model/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
@@ -1947,73 +1806,138 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/PlayerDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/Webapp/js/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="380">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <marker date="1497224823160" expanded="true" signature="409:429" ph="SELECT * FRO... PLAYER" />
-            <marker date="1497224823160" expanded="true" signature="1155:1189" ph="INSERT INTO PLAYER... " />
-            <marker date="1497224823160" expanded="true" signature="1491:1543" ph="SELECT * FRO... tournament" />
-            <marker date="1497224823160" expanded="true" signature="2184:2222" ph="DELETE FROM " />
-            <marker date="1497224823160" expanded="true" signature="2787:2836" ph="DELETE FROM " />
+            <element signature="e#394#563#0" expanded="false" />
+            <element signature="e#585#960#0" expanded="false" />
+            <element signature="e#984#1322#0" expanded="false" />
+            <element signature="n#!!block;n#fillSchema#0" expanded="false" />
+            <element signature="n#!!block;n#fillStats#0" expanded="false" />
+            <element signature="n#!!block;n#fillPlayers#0" expanded="false" />
+            <element signature="n#!!block;n#fillRules#0" expanded="false" />
+            <element signature="e#11501#11975#0" expanded="false" />
+            <element signature="e#12024#12098#0" expanded="false" />
+            <element signature="e#12207#12915#0" expanded="false" />
+            <element signature="e#13027#13404#0" expanded="false" />
+            <element signature="n#!!block;n#deleteplayer#0" expanded="false" />
+            <element signature="e#14253#15553#0" expanded="false" />
+            <element signature="e#14306#14359#0" expanded="false" />
+            <element signature="e#14411#14464#0" expanded="false" />
+            <element signature="e#14516#14569#0" expanded="false" />
+            <element signature="e#14621#14674#0" expanded="false" />
+            <element signature="e#14726#14779#0" expanded="false" />
+            <element signature="e#15667#16609#0" expanded="false" />
+            <element signature="e#16700#17789#0" expanded="false" />
+            <element signature="n#!!block;n#setDate#0" expanded="false" />
+            <element signature="n#!!block;n#buildSuccessErrorMsg#0" expanded="false" />
+            <element signature="n#!!block;n#buildSuccessErrorMsgappend#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="67" column="35" lean-forward="true" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
+          <folding>
+            <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#5;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Webapp/META-INF/context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/GameDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+        <state relative-caret-position="-288">
+          <caret line="94" column="34" lean-forward="true" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
           <folding>
-            <marker date="1497311575092" expanded="true" signature="466:523" ph="Select * fro... game" />
-            <marker date="1497311575092" expanded="true" signature="466:529" ph="Select Tourn... game" />
-            <marker date="1497311575092" expanded="true" signature="466:542" ph="Select Tourn... game" />
-            <marker date="1497311575092" expanded="true" signature="466:543" ph="Select Tourn... game" />
-            <marker date="1497311575092" expanded="true" signature="1359:1583" ph="SELECT g.Tou... game" />
-            <marker date="1497311575092" expanded="true" signature="1359:1636" ph="SELECT g.Tou... game" />
-            <marker date="1497311575092" expanded="true" signature="3212:3256" ph="INSERT INTO game... " />
-            <marker date="1497311575092" expanded="true" signature="3937:3971" ph="DELETE FROM " />
+            <element signature="imports" expanded="true" />
+            <marker date="1497452600013" expanded="true" signature="466:523" ph="Select * fro... game" />
+            <marker date="1497452600013" expanded="true" signature="466:529" ph="Select Tourn... game" />
+            <marker date="1497452600013" expanded="true" signature="466:542" ph="Select Tourn... game" />
+            <marker date="1497452600013" expanded="true" signature="466:543" ph="Select Tourn... game" />
+            <marker date="1497452600013" expanded="true" signature="1359:1583" ph="SELECT g.Tou... game" />
+            <marker date="1497452600013" expanded="true" signature="1359:1636" ph="SELECT g.Tou... game" />
+            <marker date="1497452600013" expanded="true" signature="3212:3255" ph="INSERT INTO game... " />
+            <marker date="1497452600013" expanded="true" signature="3936:3970" ph="DELETE FROM " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/PlayerDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="712">
+          <caret line="91" column="0" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1497452748679" expanded="true" signature="409:429" ph="SELECT * FRO... PLAYER" />
+            <marker date="1497452748679" expanded="true" signature="1155:1193" ph="INSERT INTO PLAYER... " />
+            <marker date="1497452748679" expanded="true" signature="1495:1547" ph="SELECT * FRO... tournament" />
+            <marker date="1497452748679" expanded="true" signature="2188:2226" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/BaseDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/TournamentDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        <state relative-caret-position="1880">
+          <caret line="94" column="5" lean-forward="false" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
           <folding>
-            <marker date="1497224823181" expanded="true" signature="410:434" ph="Select * fro... tournament" />
-            <marker date="1497224823181" expanded="true" signature="1332:1382" ph="INSERT INTO tournament... " />
-            <marker date="1497224823181" expanded="true" signature="1543:1603" ph="SELECT * FRO... tournament" />
-            <marker date="1497224823181" expanded="true" signature="2130:2190" ph="SELECT * FRO... tournament" />
-            <marker date="1497224823181" expanded="true" signature="2789:2835" ph="DELETE FROM " />
-            <marker date="1497224823181" expanded="true" signature="3403:3443" ph="DELETE FROM " />
+            <element signature="imports" expanded="true" />
+            <marker date="1497452852095" expanded="true" signature="410:434" ph="Select * fro... tournament" />
+            <marker date="1497452852095" expanded="true" signature="1332:1389" ph="INSERT INTO tournament... " />
+            <marker date="1497452852095" expanded="true" signature="1550:1610" ph="SELECT * FRO... tournament" />
+            <marker date="1497452852095" expanded="true" signature="2137:2197" ph="SELECT * FRO... tournament" />
+            <marker date="1497452852095" expanded="true" signature="2796:2842" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/persistence/StatDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="514">
+          <caret line="57" column="47" lean-forward="true" selection-start-line="57" selection-start-column="47" selection-end-line="57" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#setStat#0;class#StatDAO#0" expanded="false" />
-            <marker date="1497391038285" expanded="true" signature="493:1748" ph="SELECT playe... name" />
-            <marker date="1497391038285" expanded="true" signature="585:1647" ph="SELECT name Game_id" />
-            <marker date="1497391038285" expanded="true" signature="757:1118" ph="SELECT g.Gam... game" />
-            <marker date="1497391038285" expanded="true" signature="1191:1552" ph="SELECT g.Gam... game" />
-            <marker date="1497391038285" expanded="true" signature="2833:2971" ph="INSERT INTO stat... " />
-            <marker date="1497391038285" expanded="true" signature="3348:3395" ph="UPDATE game " />
+            <marker date="1497452980054" expanded="true" signature="493:1748" ph="SELECT playe... name" />
+            <marker date="1497452980054" expanded="true" signature="585:1647" ph="SELECT name Game_id" />
+            <marker date="1497452980054" expanded="true" signature="757:1118" ph="SELECT g.Gam... game" />
+            <marker date="1497452980054" expanded="true" signature="1191:1552" ph="SELECT g.Gam... game" />
+            <marker date="1497452980054" expanded="true" signature="2833:2975" ph="INSERT INTO stat... " />
+            <marker date="1497452980054" expanded="true" signature="3352:3399" ph="UPDATE game " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/PMS/PlayerMatchSysteem/webservices/SmsResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        <state relative-caret-position="232">
+          <caret line="117" column="35" lean-forward="false" selection-start-line="117" selection-start-column="35" selection-end-line="117" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#allPlayer#0;class#SmsResource#0" expanded="false" />
@@ -2021,7 +1945,6 @@
             <element signature="method#allRules#0;class#SmsResource#0" expanded="false" />
             <element signature="method#allStats#0;class#SmsResource#0" expanded="false" />
             <element signature="method#changeRules#0;class#SmsResource#0" expanded="false" />
-            <element signature="method#createNewPlayer#0;class#SmsResource#0" expanded="false" />
             <element signature="method#deletePlayer#0;class#SmsResource#0" expanded="false" />
             <element signature="method#submitScore#0;class#SmsResource#0" expanded="false" />
             <element signature="method#restart#0;class#SmsResource#0" expanded="false" />

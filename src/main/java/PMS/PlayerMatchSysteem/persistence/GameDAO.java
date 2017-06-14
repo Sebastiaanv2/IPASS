@@ -86,7 +86,7 @@ public class GameDAO extends BaseDAO {
         boolean success = false;
         try {
             Connection con = super.getConnection();
-            String query = "INSERT INTO game VALUES(?, NULL ,?,?, FALSE)";
+            String query = "INSERT INTO game VALUES(?, DEFAULT ,?,?, 0)";
             PreparedStatement pstmt = con.prepareStatement(query);
             pstmt.setInt(1, tid);
             pstmt.setInt(2, p1);
@@ -122,7 +122,7 @@ public class GameDAO extends BaseDAO {
     }
 
     public void shuffleGames(){
-        ArrayList<Game> games = this.getAllGamesWithNames();
+        ArrayList<Game> games = this.getAllGames();
         for (Game game : games){
             deleteGame(game.getGame_id());
         }

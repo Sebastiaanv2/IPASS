@@ -34,7 +34,7 @@ public class PlayerDAO extends BaseDAO {
         boolean success = false;
         try {
             Connection con = super.getConnection();
-            String query = "INSERT INTO PLAYER VALUES(NULL, ?)";
+            String query = "INSERT INTO PLAYER VALUES(DEFAULT , ?)";
             PreparedStatement pstmt = con.prepareStatement(query);
             pstmt.setString(1, Name);
             pstmt.executeUpdate();
@@ -74,22 +74,6 @@ public class PlayerDAO extends BaseDAO {
         }
         return success;
     }
-
-//    public void deleteGamesforPlayer(int playerid) {
-//        try {
-//            Connection con = super.getConnection();
-//            String query = "DELETE FROM game WHERE player1 = ? or player2 = ?";
-//            PreparedStatement pstmt = con.prepareStatement(query);
-//            pstmt.setInt(1, playerid);
-//            pstmt.setInt(2, playerid);
-//            pstmt.executeUpdate();
-//            System.out.println("games for player with " + playerid + " deleted!");
-//            pstmt.close();
-//            con.close();
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//    }
 
     public void createGamesforPlayer(int playerid) {
         GameDAO gd = new GameDAO();

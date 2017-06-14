@@ -11,7 +11,7 @@ public class BaseDAO {
 
         try {
             InitialContext ic = new InitialContext();
-            DataSource ds = (DataSource) ic.lookup("java:comp/env/jdbc/MySQL");
+            DataSource ds = (DataSource) ic.lookup("java:comp/env/jdbc/Postgres");
 
             result = ds.getConnection();
         } catch (Exception ex) {

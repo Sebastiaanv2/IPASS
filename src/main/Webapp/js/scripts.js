@@ -18,8 +18,6 @@ $(document).ready(function () {
 
 });
 
-//TODO: tekst slider op frontpage
-
 var myschemadummy = [
     {"matchid": "51", "speler1": "Michael Prinsen", "speler2": "Sebastiaan van Rijn"},
     {"matchid": "11", "speler1": "Freek Verhoeven", "speler2": "Jan Versteeg"}
