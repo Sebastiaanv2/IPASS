@@ -15,6 +15,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.io.StringReader;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 @PermitAll
 @Path("/sms")
@@ -42,8 +43,12 @@ public class SmsResource {
     public String allGames() {
         GameDAO gd = new GameDAO();
         JsonArrayBuilder jab = Json.createArrayBuilder();
+        ArrayList<Game> games = gd.getAllGamesWithNames();
+        if(games.isEmpty()){
+            gd.createAllGames();
+        }
 
-        for (Game g : gd.getAllGamesWithNames()) {
+        for (Game g : games) {
             JsonObjectBuilder job = Json.createObjectBuilder();
             job.add("matchid", g.getGame_id())
                     .add("speler1", g.getPlayer1name())
