@@ -61,11 +61,6 @@ public class GameDAO extends BaseDAO {
         return games;
     }
 
-    public int calculateMatchAmount(int PlayerAmount) {
-        int amountOfMatches = PlayerAmount * (PlayerAmount - 1) / 2;
-        return amountOfMatches;
-    }
-
     public boolean createAllGames() {
         PlayerDAO pd = new PlayerDAO();
         TournamentDAO td = new TournamentDAO();
