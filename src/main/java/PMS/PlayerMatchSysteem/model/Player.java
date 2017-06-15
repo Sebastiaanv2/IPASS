@@ -9,8 +9,7 @@ public class Player {
         this.Name = Name;
     }
 
-    public Player() {
-    }
+
 
     public String getName() {
         return Name;
@@ -24,12 +23,4 @@ public class Player {
         return Player_id;
     }
 
-    public void setID(int ID) {
-        this.Player_id = ID;
-    }
-
-    @Override
-    public String toString() {
-        return "Player{ ID= "+Player_id+" | Name= " + Name + " }";
-    }
 }

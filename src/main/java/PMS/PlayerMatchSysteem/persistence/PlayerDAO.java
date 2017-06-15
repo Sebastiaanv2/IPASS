@@ -59,7 +59,6 @@ public class PlayerDAO extends BaseDAO {
     public boolean deletePlayer(int playerid) {
         boolean success = false;
         try {
-//            this.deleteGamesforPlayer(playerid);
             Connection con = super.getConnection();
             String query = "DELETE FROM PLAYER WHERE player_id = ?";
             PreparedStatement pstmt = con.prepareStatement(query);

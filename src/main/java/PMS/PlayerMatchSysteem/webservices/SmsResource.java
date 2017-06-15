@@ -46,6 +46,7 @@ public class SmsResource {
         ArrayList<Game> games = gd.getAllGamesWithNames();
         if(games.isEmpty()){
             gd.createAllGames();
+            games = gd.getAllGamesWithNames();
         }
 
         for (Game g : games) {

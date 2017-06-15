@@ -34,7 +34,6 @@ public class TournamentDAO extends BaseDAO {
     }
 
     public int createTournament() {
-        Tournament tournament = new Tournament();
         int tid = 0;
         try {
             Connection con = super.getConnection();

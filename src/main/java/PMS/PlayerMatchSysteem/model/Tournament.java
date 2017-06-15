@@ -17,37 +17,4 @@ public class Tournament {
     public Tournament() {
     }
 
-    public int getTournament_id() {
-        return Tournament_id;
-    }
-
-    public void setTournament_id(int tournament_id) {
-        Tournament_id = tournament_id;
-    }
-
-    public Date getStartDate() {
-        return StartDate;
-    }
-
-    public void setStartDate(Date startDate) {
-        StartDate = startDate;
-    }
-
-    public Date getEndDate() {
-        return EndDate;
-    }
-
-    public void setEndDate(Date endDate) {
-        EndDate = endDate;
-    }
-
-    @Override
-    public String toString() {
-        return "Tournament{" +
-                "Tournament_id=" + Tournament_id +
-                ", StartDate=" + StartDate +
-                ", EndDate=" + EndDate +
-                '}';
-    }
-
 }
