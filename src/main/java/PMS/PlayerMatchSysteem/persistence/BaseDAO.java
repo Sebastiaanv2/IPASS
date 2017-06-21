@@ -7,7 +7,7 @@ import javax.naming.InitialContext;
 import javax.sql.DataSource;
 import org.apache.tomcat.dbcp.dbcp2.BasicDataSource;
 public class BaseDAO {
-    private DataSource connectionPool;
+    private static DataSource connectionPool;
     public BaseDAO() {
         try {
             final String DATABASE_URL_PROP = System.getenv("DATABASE_URL");
@@ -31,7 +31,7 @@ public class BaseDAO {
             throw new RuntimeException(e);
         }
     }
-    protected final Connection getConnection() {
+    protected static Connection getConnection() {
         try {
             return connectionPool.getConnection();
         } catch (Exception ex) {
