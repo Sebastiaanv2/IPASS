@@ -14,17 +14,21 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-<div class="container">
-    <nav class="navbar navbar-default" role="navigation">
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse">
+                <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand">ScoreMatchSysteem</a>
         </div>
-        <div class="navbar-collapse collapse">
+
+        <div class="collapse navbar-collapse" id="nav-collapse">
             <ul class="nav navbar-nav navbar-left">
                 <li class="active"><a data-toggle="tab" href="#Wedstrijdschema">Wedstrijdschema</a></li>
                 <li><a data-toggle="tab" href="#Spelerstatistieken">Spelerstatistieken</a></li>
@@ -44,8 +48,9 @@
                 <li><a id="Login" class="bg-danger" data-toggle="modal" href="#LoginModal">Login</a></li>
             </ul>
         </div>
-    </nav>
-
+    </div>
+</nav>
+<div class="container">
     <div class="tab-content">
         <div id="Wedstrijdschema" class="tab-pane fade in active">
             <div class="jumbotron">
@@ -84,7 +89,6 @@
                         <button type="button" class="btn btn-primary btn-sm" id="RestartTournament">Herstart
                             Tournament
                         </button>
-                        <button type="button" class="btn btn-primary btn-sm" id="skipWeek">Schuif een week op</button>
                         <button type="button" class="btn btn-success btn-sm" id="scoreSubmit">Scores opslaan</button>
                     </div>
                 </div>
@@ -286,7 +290,7 @@
                 <div class="header-text hidden-xs">
                     <div class="col-md-12 text-center">
                         <h4>
-                            <span id="r3slide">slide2</span>
+                            <span id="r3slide">slide3</span>
                         </h4>
                     </div>
                 </div>
@@ -295,7 +299,7 @@
                 <div class="header-text hidden-xs">
                     <div class="col-md-12 text-center">
                         <h4>
-                            <span id="r4slide">slide2</span>
+                            <span id="r4slide">slide4</span>
                         </h4>
                     </div>
                 </div>
@@ -304,7 +308,7 @@
                 <div class="header-text hidden-xs">
                     <div class="col-md-12 text-center">
                         <h4>
-                            <span id="r5slide">slide2</span>
+                            <span id="r5slide">slide5</span>
                         </h4>
                     </div>
                 </div>

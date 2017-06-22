@@ -10,3 +10,7 @@
 .jumbotron p {
     font-size: 16px;
 }
+
+table {
+    overflow-x: scroll;
+}

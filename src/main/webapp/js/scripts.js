@@ -1,6 +1,6 @@
 $(document).ready(function () {
     fillSchema();
-    fillStats(mystatsdummy);
+    fillStats();
     fillPlayers();
     fillRules();
     setDate();
@@ -17,41 +17,6 @@ $(document).ready(function () {
     });
 
 });
-
-var myschemadummy = [
-    {"matchid": "51", "speler1": "Michael Prinsen", "speler2": "Sebastiaan van Rijn"},
-    {"matchid": "11", "speler1": "Freek Verhoeven", "speler2": "Jan Versteeg"}
-];
-
-var mystatsdummy = [
-    {
-        "rank": "2",
-        "spelernaam": "Michael Prinsen",
-        "punten": "2",
-        "doelsaldo": "12",
-        "tegenpunten": "4",
-        "matchesGespeeld": "1"
-    },
-    {
-        "rank": "1",
-        "spelernaam": "Sebastiaan van Rijn",
-        "punten": "50",
-        "doelsaldo": "4",
-        "tegenpunten": "12",
-        "matchesGespeeld": "1"
-    }
-];
-
-var myplayersdummy = [
-    {"spelerid": "1", "spelernaam": "Michael Prinsen"},
-    {"spelerid": "2", "spelernaam": "Sebastiaan van Rijn"},
-    {"spelerid": "3", "spelernaam": "Freek Verhoeven"},
-    {"spelerid": "4", "spelernaam": "Jan Versteeg"},
-    {"spelerid": "5", "spelernaam": "Pieter de Vos"},
-    {"spelerid": "6", "spelernaam": "Kerel achternaam"}
-];
-
-var myrulesdummy = {"rule1": "1", "rule2": "2", "rule3": "3", "rule4": "4", "rule5": "5"};
 
 //function to fill the Wedstrijdschema table.
 function fillSchema() {
@@ -165,24 +130,19 @@ $("#scoreSubmit").click(function () {
         type: "get",
         success: function (json) {
             var r1 = json.rule1;
-            console.log(typeof r1);
             var r2 = json.rule2;
             var r3 = json.rule3;
             var r4 = json.rule4;
             var r5 = json.rule5;
-            console.log(typeof r5);
             $('#wSchema').find('tr').each(function () {
                 var p1Score = $(this).find(".s1").val();
                 var p2Score = $(this).find(".s2").val();
 
                 if (p1Score === "" || p2Score === "") {
-                    console.log("vul iets in...<br>");
                 } else {
                     var matchid = $(this).find(".match_id").html();
                     var p1name = $(this).find(".player1").html();
                     var p2name = $(this).find(".player2").html();
-                    console.log(p1name);
-                    console.log(p2name);
                     p1Score = parseInt(p1Score);
                     p2Score = parseInt(p2Score);
                     var p1Win = false;
@@ -193,7 +153,6 @@ $("#scoreSubmit").click(function () {
                     var p2Punten = 0;
                     $('#Pstats').find('tr').each(function () {
                         var spelernaam = $(this).find(".spelernaam").html();
-                        console.log(spelernaam);
                         if(spelernaam === p1name){
                             p1Rank = parseInt($(this).find(".rank").html());
                         }
@@ -209,8 +168,6 @@ $("#scoreSubmit").click(function () {
                     if (p2Score > p1Score) {
                         p2Win = true;
                     }
-                    console.log("p1w " + p1Win + " p2w " + p2Win);
-                    console.log("p2r " + p1Rank + " p2r " + p2Rank);
 
                     //5 Win je van iemand met 11-0 dan krijg je 2 bonuspunten.
                     if (p1Score === 11 && p2Score === 0) {
@@ -260,18 +217,17 @@ $("#scoreSubmit").click(function () {
                         p1Punten += r4;
                     }
 
-                    console.log("matchid: " + matchid + " | player1 heeft een score van " + p1Score + " en " + p1Punten + " punten | player2 heeft een score van " + p2Score + " en " + p2Punten + " punten");
                     setScore(matchid, p1Score, p2Score, p1Punten, p2Punten)
                 }
-                setTimeout(function () {
-                    fillSchema();
-                }, 250);
-                setTimeout(function () {
-                    fillStats();
-                }, 500);
             });
         }
     });
+    setTimeout(function () {
+        fillSchema();
+    }, 250);
+    setTimeout(function () {
+        fillStats();
+    }, 500);
 });
 
 //ajax function to save scores
@@ -311,19 +267,15 @@ $("#RestartTournament").click(function () {
             xhr.setRequestHeader("Authorization", "Bearer " + token);
         },
         success: function () {
-            var string = "RESTART!<br>";
-            $("#scoreTest").append(string);
+            buildSuccessErrorMsg("#scoresuccess","Tournament herstart!")
+        },
+        error: function(){
+            buildSuccessErrorMsg("#scoreerror","Fout bij herstarten Tournament!")
         }
     });
     setTimeout(function () {
         fillSchema();
     }, 250);
-});
-
-//skip week
-$("#skipWeek").click(function () {
-    var string = "Skip week!<br>";
-    $("#scoreTest").append(string);
 });
 
 //create new player using input when maak nieuwe speler is clicked.
@@ -445,13 +397,10 @@ $("#Loginbtn").click(function () {
             success: function (response) {
                 window.sessionStorage.setItem("sessionToken", response);
                 window.location.href = "index.html";
-                console.log(response);
                 alert("Login Succesvol!");
                 $("#LoginModal").modal("toggle");
             },
             error: function (jqXHR, textStatus, errorThrown) {
-                console.log(textStatus);
-                console.log(errorThrown);
                 buildSuccessErrorMsg("#passwordcheck", "Wachtwoord incorrect!");
             }
         });
@@ -465,7 +414,6 @@ $("#SavePass").click(function () {
     var pass = $("#pass_old").val();
     var pass1 = $("#pass_new").val();
     var pass2 = $("#pass_new1").val();
-    console.log("pass: " + pass + " pass1: " + pass1 + " pass2: " + pass2);
     if (pass1 === pass2) {
         var data = {"pass": "" + pass + "", "pass1": "" + pass1 + ""};
         var uri = "/restservices/sms/changepass";
