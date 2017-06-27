@@ -3,22 +3,22 @@ package PMS.PlayerMatchSysteem.persistence;
 
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
+import java.net.URISyntaxException;
 import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class BaseDAO {
-    protected final Connection getConnection() {
-        Connection result = null;
-
+    public static Connection getConnection() {
+        String dbUrl = System.getenv("JDBC_DATABASE_URL");
+        Connection con = null;
         try {
-            InitialContext ic = new InitialContext();
-            DataSource ds = (DataSource) ic.lookup("java:comp/env/jdbc/PostgresDS");
-
-            result = ds.getConnection();
-        } catch (Exception ex) {
-            throw new RuntimeException(ex);
+            con = DriverManager.getConnection(dbUrl);
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-
-        return result;
+        return con;
     }
 
 }
+
