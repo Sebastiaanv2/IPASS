@@ -9,13 +9,25 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class BaseDAO {
-    public static Connection getConnection() {
+    protected final Connection getConnection() {
+
         String dbUrl = System.getenv("JDBC_DATABASE_URL");
         Connection con = null;
         try {
             con = DriverManager.getConnection(dbUrl);
         } catch (SQLException e) {
             e.printStackTrace();
+        }
+        if (con == null) {
+            try {
+                InitialContext ic = new InitialContext();
+                DataSource ds = (DataSource) ic.lookup("java:comp/env/jdbc/PostgresDS");
+
+                con = ds.getConnection();
+            } catch (Exception ex) {
+                throw new RuntimeException(ex);
+            }
+
         }
         return con;
     }
